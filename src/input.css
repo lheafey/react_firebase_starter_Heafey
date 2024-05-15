@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.login-input {
+.signup-login-div {
+  @apply flex flex-col w-[250px] p-4 m-auto mt-4 border-solid border-2 border-gray-400;
+}
+
+.signup-login-input {
   @apply bg-white border-[1px] border-solid border-gray-500 rounded-[3px] p-3 mb-5 focus:outline-gray-400 focus:outline-1 focus:outline;
 }

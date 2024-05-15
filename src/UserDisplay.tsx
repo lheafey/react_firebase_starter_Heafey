@@ -5,7 +5,7 @@ function UserDisplay() {
   return (
     <div
       id="display-div"
-      className="bg-white border-solid border-2 border-black w-[350px] h-[200px] m-auto mt-5"
+      className="w-[90%] h-[200px] m-auto mt-5 bg-white border-solid border-2 border-black "
     ></div>
   );
 }

@@ -562,10 +562,6 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-\[20px\] {
-  margin-top: 20px;
-}
-
 .flex {
   display: flex;
 }
@@ -586,24 +582,40 @@ video {
   height: 100lvh;
 }
 
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[550px\] {
+  height: 550px;
+}
+
 .w-\[350px\] {
   width: 350px;
 }
 
-.w-\[400px\] {
-  width: 400px;
+.w-\[600px\] {
+  width: 600px;
 }
 
-.w-\[500px\] {
-  width: 500px;
+.w-full {
+  width: 100%;
 }
 
-.flex-col {
-  flex-direction: column;
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .place-content-center {
   place-content: center;
+}
+
+.content-between {
+  align-content: space-between;
 }
 
 .rounded-md {
@@ -656,7 +668,20 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.login-input {
+.signup-login-div {
+  margin: auto;
+  margin-top: 1rem;
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+  padding: 1rem;
+}
+
+.signup-login-input {
   margin-bottom: 1.25rem;
   border-radius: 3px;
   border-width: 1px;
@@ -668,7 +693,7 @@ video {
   padding: 0.75rem;
 }
 
-.login-input:focus {
+.signup-login-input:focus {
   outline-style: solid;
   outline-width: 1px;
   outline-color: #9ca3af;
