@@ -25,9 +25,7 @@ function Signup() {
         placeholder="password"
         name="password"
       />
-      <button className="bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-400">
-        Signup
-      </button>
+      <button className="signup-login-button">Signup</button>
     </div>
   );
 }

@@ -7,5 +7,9 @@
 }
 
 .signup-login-input {
-  @apply bg-white border-[1px] border-solid border-gray-500 rounded-[3px] p-3 mb-5 focus:outline-gray-400 focus:outline-1 focus:outline;
+  @apply w-full bg-white border-[1px] border-solid border-gray-500 rounded-[3px] p-3 mb-5 focus:outline-gray-400 focus:outline-1 focus:outline;
+}
+
+.signup-login-button {
+  @apply w-full bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-400;
 }

@@ -3,7 +3,7 @@ import "./style.css";
 
 function Login() {
   return (
-    <div id="login-div" className="signup-login-div">
+    <div id="login-div">
       <input
         id="input-email"
         className="signup-login-input"
@@ -18,9 +18,7 @@ function Login() {
         placeholder="password"
         name="password"
       />
-      <button className="bg-blue-500 text-white font-semibold p-3 rounded-md hover:bg-blue-400">
-        Login
-      </button>
+      <button className="signup-login-button">Login</button>
     </div>
   );
 }

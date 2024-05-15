@@ -2,6 +2,7 @@
 import "./style.css";
 import Signup from "./Signup";
 import Login from "./Login";
+import Logout from "./Logout";
 import UserDisplay from "./UserDisplay";
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
       >
         <div id="signup-login-div" className="flex flex-row content-between">
           <Signup />
-          <Login />
+          <div className="signup-login-div">
+            <Login />
+            <Logout />
+          </div>
         </div>
         <UserDisplay />
       </div>
