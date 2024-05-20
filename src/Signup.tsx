@@ -1,6 +1,7 @@
 // Signup.tsx
 import React, { useState } from "react";
 import { auth } from "./firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -9,9 +10,26 @@ const Signup = () => {
 
   const signupUser = (event) => {
     event.preventDefault();
-    console.log(auth);
-    console.log(email);
-    console.log(password);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(userCredential);
+        console.log("User with email " + user.email + " created!");
+
+        // Update profile with username
+        updateProfile(user, { displayName: username })
+          .then(() => {
+            console.log("Username updated to: " + user.displayName);
+          })
+          .catch((error) => {
+            console.error("Error updating username: ", error);
+          });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorCode, errorMessage);
+      });
   };
 
   return (

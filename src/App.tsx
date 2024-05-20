@@ -4,6 +4,8 @@ import Signup from "./Signup";
 import Login from "./Login";
 import Logout from "./Logout";
 import UserDisplay from "./UserDisplay";
+import Uploader from "./Uploader";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           </div>
         </div>
         <UserDisplay />
+        <Uploader />
       </div>
     </div>
   );
