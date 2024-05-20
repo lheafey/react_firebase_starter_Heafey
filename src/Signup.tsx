@@ -1,33 +1,42 @@
-import React from "react";
-import "./style.css";
+// Signup.tsx
+import React, { useState } from "react";
+import { auth } from "./firebase";
 
-function Signup() {
+const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signupUser = (event) => {
+    event.preventDefault();
+    console.log(auth);
+    console.log(email);
+    console.log(password);
+  };
+
   return (
-    <div id="signup-div" className="signup-login-div">
+    <div>
       <input
-        id="signup-username"
-        className="signup-login-input"
         type="text"
-        placeholder="username"
-        name="username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        placeholder="Username"
       />
       <input
-        id="signup-email"
-        className="signup-login-input"
         type="email"
-        placeholder="email address"
-        name="email"
+        value={email}
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder="Email"
       />
       <input
-        id="signup-password"
-        className="signup-login-input"
         type="password"
-        placeholder="password"
-        name="password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        placeholder="Password"
       />
-      <button className="signup-login-button">Signup</button>
+      <button onClick={signupUser}>Sign Up</button>
     </div>
   );
-}
+};
 
 export default Signup;
